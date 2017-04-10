@@ -2,7 +2,7 @@ public class BusStop{
   private Person[] queue;
 
   public BusStop(){
-    this.queue = new Person[10];
+    this.queue = new Person[15];
   }
 
   public void add(Person person){
@@ -28,7 +28,9 @@ public class BusStop{
   }
 
   public void arrival(Bus bus){
-    for(int i = 0; i < queueCount(); i++){
+
+    int count = queueCount();
+    for(int i = 0; i < count; i++){
       if(bus.isBusFull()){
         return;
       }
